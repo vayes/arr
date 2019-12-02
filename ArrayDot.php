@@ -6,6 +6,10 @@
  * @link    https://github.com/adbario/php-dot-notation
  * @license https://github.com/adbario/php-dot-notation/blob/2.x/LICENSE.md (MIT License)
  */
+
+/**
+ * @contributer Yahya Erturan <yahya@erturan.com.tr>
+ */
 namespace Vayes\Arr;
 
 use Countable;
@@ -15,12 +19,12 @@ use JsonSerializable;
 use IteratorAggregate;
 
 /**
- * Dot
+ * ArrayDot
  *
  * This class provides a dot notation access and helper functions for
  * working with arrays of data. Inspired by Laravel Collection.
  */
-class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
+class ArrayDot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
 {
     /**
      * The stored items
@@ -270,8 +274,8 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     }
 
     /**
-     * Merge a given array or a Dot object with the given key
-     * or with the whole Dot object
+     * Merge a given array or a ArrayArrayDot object with the given key
+     * or with the whole ArrayDot object
      *
      * @param array|string|self $key
      * @param array|self        $value
@@ -291,8 +295,8 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     }
 
     /**
-     * Recursively merge a given array or a Dot object with the given key
-     * or with the whole Dot object.
+     * Recursively merge a given array or a ArrayDot object with the given key
+     * or with the whole ArrayDot object.
      *
      * Duplicate keys are converted to arrays.
      *
@@ -314,11 +318,11 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     }
 
     /**
-     * Recursively merge a given array or a Dot object with the given key
-     * or with the whole Dot object.
+     * Recursively merge a given array or a ArrayDot object with the given key
+     * or with the whole ArrayDot object.
      *
      * Instead of converting duplicate keys to arrays, the value from
-     * given array will replace the value in Dot object.
+     * given array will replace the value in ArrayDot object.
      *
      * @param array|string|self $key
      * @param array|self        $value
@@ -409,7 +413,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
 
     /**
      * Replace all values or values within the given key
-     * with an array or Dot object
+     * with an array or ArrayDot object
      *
      * @param array|string|self $key
      * @param array|self        $value
