@@ -45,6 +45,8 @@ Install the latest version using [Composer](https://getcomposer.org/):
 $ composer require vayes/arr
 ```
 
+Not available via composer yet.
+
 ## Usage
 
 Create a new ArrayDot object:
