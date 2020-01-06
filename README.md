@@ -419,6 +419,40 @@ Returns all the stored items as JSON:
 echo $dot->toJson();
 ```
 
+<a name="arraystack"></a>
+## ArrayStack
+
+Usage: 
+
+```php
+$stack = new ArrayStack($array);
+```
+
+Now you have access to:
+
+```php
+# Now you have access to:
+public function getData(): array
+public function getMeta(): ArrayMeta
+public function loop(\Closure $closure)
+```
+
+If you call `getMeta()`, then you have access to:
+
+```php
+public function getCount(): int
+public function getFirstIndex(): int
+public function getFirstKey()
+public function getFirstValue()
+public function getLastIndex(): int
+public function getLastKey()
+public function getLastValue()
+public function offsetSet($offset, $value)
+public function offsetExists($offset)
+public function offsetUnset($offset)
+public function offsetGet($offset)
+```
+
 ## License
 
 [MIT license](LICENSE.md)
